@@ -316,7 +316,7 @@ header .navbar ul li a:hover{
     background: var(--pinkeu);
 }
 
-.gallery .box-container{
+.project .box-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -324,24 +324,35 @@ header .navbar ul li a:hover{
     padding: 2rem 0;
 }
 
-.gallery .box-container .box{
-    height: 20rem;
-    width: 26rem;
-    border-radius: 1rem;
+.project .box-container .box{
+    height: auto;
+    width: 40%;
     margin: 2rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
+    border-radius: 1rem;
+    background: #0B283F;
+    box-shadow: 19px 19px 38px #081c2b,
+                -19px -19px 38px #0e3453;
 }
 
-.gallery .box-container .box img{
+.project .box-container .box .project-details{
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 2rem;
+    text-align: center;
+}
+
+.project .box-container .box img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 1rem;
 }
 
-.gallery .box-container .box:hover img{
-    transform: scale(1.2);
-}
+/* .project .box-container .box:hover img{
+    border-radius: 1rem;
+} */
 
 h1{
     font-size: 3rem;
@@ -374,41 +385,7 @@ h1{
 
 .contact .row .content{
     flex: 1 1 30rem;
-    padding: 4rem;
-    padding-bottom: 0;
-}
-
-.contact .row form{
-    flex: 1 1 45rem;
-    padding: 2rem;
-    margin: 2rem;
-    margin-bottom: 4rem;
-}
-
-.contact .row form .box{
-    padding: 1.5rem;
-    margin: 1rem 0;
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);
-    color: #0B283F;
-    text-transform: none;
-    font-size: 1.7rem;
-    width: 100%;
-}
-
-.contact .row form .box::placeholder{
-    text-transform: capitalize;
-}
-
-.contact .row form .message{
-    height: 15rem;
-    resize: none;
-}
-
-.contact .row .content .title{
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 3rem;
-    padding-bottom: 2rem;
+    margin: 3rem 6rem;
 }
 
 .contact .row .content .info h3{
@@ -420,8 +397,13 @@ h1{
     font-weight: normal;
 }
 
+.contact .row .content .info h3 a{
+    color: #eee;
+    text-decoration: underline;
+}
+
 .contact .row .content .info h3 i{
-    padding-right: 1rem;
+    padding-right: 2rem;
     color: var(--pinkeu);
 }
 
@@ -497,7 +479,7 @@ h1{
         width: 100%;
     }
 
-    .gallery .box-container .box{
+    .project .box-container .box{
         width: 100%;
     }
 
