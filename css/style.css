@@ -35,8 +35,43 @@ html::-webkit-scrollbar-thumb{
     background: var(--pinkeu);
 }
 
+.sparkle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    animation: sparkleAnimation linear infinite;
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
 body{
-    background:#0B283F;
+    background: radial-gradient(#0B283F, #020111); /* Dark sky gradient */
     overflow-x: hidden;
     padding-left: 35rem;
 }
