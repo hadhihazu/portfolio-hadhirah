@@ -136,7 +136,7 @@ header{
     height: 100%;
     width: 35rem;
     background: rgb(185,223,255);
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);
+    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, #ffeccd 50%, rgba(255,193,254,1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
