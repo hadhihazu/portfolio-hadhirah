@@ -54,10 +54,11 @@ section{
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .btn i{
-    padding: 0 .5rem;
+    padding-right: 1rem;
     font-size: 1.8rem;
 }
 
@@ -73,6 +74,7 @@ section{
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .btn2:hover{
@@ -114,6 +116,7 @@ header .user img{
     object-fit: cover;
     margin-bottom: 1rem;
     border: .7rem solid #ffc1fe;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 header .user .name{
@@ -143,6 +146,7 @@ header .navbar ul li a{
     color: #fff;
     font-size: 2rem;
     border-radius: 5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 header .navbar ul li a:hover{
@@ -316,43 +320,102 @@ header .navbar ul li a:hover{
     background: var(--pinkeu);
 }
 
-.project .box-container{
+.cards-wrapper {
     display: flex;
-    align-items: center;
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    padding: 4rem 6rem;
 }
 
-.project .box-container .box{
-    height: auto;
-    width: 40%;
-    margin: 2rem;
-    /* overflow: hidden; */
-    cursor: pointer;
-    border-radius: 1rem;
-    background: #0B283F;
-    box-shadow: 19px 19px 38px #081c2b,
-                -19px -19px 38px #0e3453;
+/* Container for 3D effect */
+.card-container {
+    perspective: 1000px;
+    width: 48rem;
+    height: 400px;
 }
 
-.project .box-container .box .project-details{
-    font-size: 1.5rem;
-    color: #eee;
-    padding: 2rem;
+/* Inner card wrapper */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Flip on hover */
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+/* Front & back styles */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.project .box-container .box img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
+/* Front side */
+.card-front {
+    background: #fff;
 }
 
-/* .project .box-container .box:hover img{
-    border-radius: 1rem;
-} */
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-front .card-content {
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #0B283F;
+}
+
+.card-front .card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Back side */
+.card-back {
+    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 2rem;
+}
+
+.card-back h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0B283F;
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-back ul li {
+    font-size: 1.5rem;
+    background-color: #0B283F;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem;
+    border-radius: 3rem;
+}
 
 h1{
     font-size: 3rem;
