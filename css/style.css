@@ -2,6 +2,13 @@
 
 :root{
     --pinkeu:#FF8AFD;
+    --lightpink:#ffc1fe;
+    --darkblue:#0B283F;
+    --lightblue:#b9dfff;
+    --yellow:#ffeccd;
+    --black: #333;
+    --gradient: linear-gradient(90deg, var(--lightblue) 0%, var(--yellow) 50%, var(--lightpink) 100%);
+    --shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 *{
@@ -15,7 +22,7 @@
 
 *::selection{
     background: var(--pinkeu);
-    color: #333;
+    color: var(--black);
 }
 
 html{
@@ -28,7 +35,7 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track{
-    background: linear-gradient(0deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);
+    background: var(--gradient);
 }
 
 html::-webkit-scrollbar-thumb{
@@ -50,7 +57,7 @@ html::-webkit-scrollbar-thumb{
     height: 4px;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px white;
     opacity: 0;
     animation: sparkleAnimation linear infinite;
 }
@@ -71,7 +78,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: radial-gradient(#0B283F, #020111); /* Dark sky gradient */
+    background: radial-gradient(var(--darkblue), #020111); /* Dark sky gradient */
     overflow-x: hidden;
     padding-left: 35rem;
 }
@@ -84,12 +91,12 @@ section{
 .btn{
     padding: .7rem 3rem;
     background: #ffeccd;
-    color: #333;
+    color: var(--black);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--shadow);
 }
 
 .btn i{
@@ -103,13 +110,13 @@ section{
 
 .btn2{
     padding: .7rem 3rem;
-    background: #0B283F;
-    color: #eee;
+    background: var(--darkblue);
+    color: white;
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--shadow);
 }
 
 .btn2:hover{
@@ -122,7 +129,7 @@ section{
     font-size: 4rem;
     padding: 1rem;
     border-bottom: .1rem solid #fff4;
-    color: #fff;
+    color: white;
 }
 
 .heading span{
@@ -135,8 +142,7 @@ header{
     z-index: 10000;
     height: 100%;
     width: 35rem;
-    background: rgb(185,223,255);
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, #ffeccd 50%, rgba(255,193,254,1) 100%);
+    background: var(--gradient);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,18 +156,18 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: .7rem solid #ffc1fe;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: .7rem solid var(--lightpink);
+    box-shadow: var(--shadow);
 }
 
 header .user .name{
     font-size: 3.5rem;
-    color: #333;
+    color: var(--black);
 }
 
 header .user .post{
     font-size: 2rem;
-    color: #333;
+    color: var(--black);
 }
 
 header .navbar{
@@ -177,11 +183,11 @@ header .navbar ul li a{
     display: block;
     padding: 1rem;
     margin: 1.5rem 0;
-    background: #0B283F;
-    color: #fff;
+    background: var(--darkblue);
+    color: white;
     font-size: 2rem;
     border-radius: 5rem;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--shadow);
 }
 
 header .navbar ul li a:hover{
@@ -191,8 +197,8 @@ header .navbar ul li a:hover{
 #menu{
     position: fixed;
     top: 2rem; right: 2rem;
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);
-    color: #333;
+    background: var(--gradient);
+    color: var(--black);
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
@@ -209,12 +215,12 @@ header .navbar ul li a:hover{
 
 .home h3{
     font-size: 2.5rem;
-    color: #eee;
+    color: white;
 }
 
 .home h1{
     font-size: 5rem;
-    color: #eee;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -224,7 +230,7 @@ header .navbar ul li a:hover{
 
 .home p{
     font-size: 2rem;
-    color: #eee;
+    color: white;
     padding: 1rem 0;
 }
 
@@ -241,7 +247,7 @@ header .navbar ul li a:hover{
     padding: 2rem 1rem;
     padding-left: 6rem;
     font-size: large;
-    color: #eee;
+    color: white;
 }
 
 .about .row .info td{
@@ -268,7 +274,7 @@ header .navbar ul li a:hover{
 
 .about .row .title2{
     font-size: 3rem;
-    color: #eee;
+    color: white;
     padding-left: 6rem;
     text-align: center;
     margin-top: 2rem;
@@ -278,7 +284,7 @@ header .navbar ul li a:hover{
 
 .about .row .counter .box{
     width: 17rem;
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);;
+    background: var(--gradient);
     text-align: center;
     padding: 1rem;
     margin: 1rem;
@@ -288,7 +294,7 @@ header .navbar ul li a:hover{
 .about .row .counter .box span{
     font-size: large;
     font-weight: bold;
-    color: #0B283F;
+    color: var(--darkblue);
 }
 
 .education .box-container{
@@ -308,21 +314,21 @@ header .navbar ul li a:hover{
 
 .education .box-container .box span{
     font-size: 1.3rem;
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);
-    color: #0B283F;
+    background: var(--gradient);
+    color: var(--darkblue);
     border-radius: 5rem;
     padding: .5rem 2.5rem;
 }
 
 .education .box-container .box h3{
     font-size: 2rem;
-    color: #fff;
+    color: white;
     padding-top: 1.5rem;
 }
 
 .education .box-container .box .result{
     font-size: 1.6rem;
-    color: #eee;
+    color: white;
     position: absolute;
     bottom: 0px;
     font-weight: bold;
@@ -337,7 +343,7 @@ header .navbar ul li a:hover{
 
 .education .box-container .box p{
     font-size: 1.4rem;
-    color: #eee;
+    color: white;
     padding: 1rem 0;
     margin-bottom: 3rem;
 }
@@ -351,7 +357,7 @@ header .navbar ul li a:hover{
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color: #fff;
+    color: white;
     background: var(--pinkeu);
 }
 
@@ -401,7 +407,7 @@ header .navbar ul li a:hover{
 
 /* Front side */
 .card-front {
-    background: #fff;
+    background: white;
 }
 
 .card-front img {
@@ -414,7 +420,7 @@ header .navbar ul li a:hover{
 .card-front .card-content {
     padding: 2rem;
     font-size: 1.5rem;
-    color: #0B283F;
+    color: var(--darkblue);
 }
 
 .card-front .card-content h3 {
@@ -424,7 +430,7 @@ header .navbar ul li a:hover{
 
 /* Back side */
 .card-back {
-    background: linear-gradient(90deg, rgba(185,223,255,1) 0%, rgba(255,236,205,1) 50%, rgba(255,193,254,1) 100%);;
+    background: var(--gradient);
     color: white;
     transform: rotateY(180deg);
     padding: 2rem;
@@ -433,7 +439,7 @@ header .navbar ul li a:hover{
 .card-back h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #0B283F;
+    color: var(--darkblue);
 }
 
 .card-back ul {
@@ -446,7 +452,7 @@ header .navbar ul li a:hover{
 
 .card-back ul li {
     font-size: 1.5rem;
-    background-color: #0B283F;
+    background-color: var(--darkblue);
     padding: 1rem 2rem;
     margin: 1rem 1rem;
     border-radius: 3rem;
@@ -454,7 +460,7 @@ header .navbar ul li a:hover{
 
 h1{
     font-size: 3rem;
-    color: #eee;
+    color: white;
     text-transform: capitalize;
     padding: 1rem 0;
 }
@@ -462,7 +468,7 @@ h1{
 .info-table {
     width: 30%;
     border-collapse: collapse;
-    color: #eee;
+    color: white;
 }
 
 .info-table td {
@@ -490,14 +496,19 @@ h1{
     display: flex;
     align-items: center;
     font-size: 2rem;
-    color: #eee;
+    color: white;
     padding: 1rem 0;
     font-weight: normal;
 }
 
 .contact .row .content .info h3 a{
-    color: #eee;
+    color: white;
     text-decoration: underline;
+}
+
+.contact .row .content .info h3 a:hover{
+    color: var(--yellow);
+    text-decoration: none;
 }
 
 .contact .row .content .info h3 i{
