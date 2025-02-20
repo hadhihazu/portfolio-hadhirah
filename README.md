@@ -12,5 +12,5 @@ You can view my portfolio live at:
 
 ## 📞 Contact
 If you’d like to connect, feel free to reach out:
-- 📧 Email: hadhirah43@gmail.com
-- 🔗 LinkedIn: 
+- 📧 hadhirah43@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/nurul-hadhirah-hazuddin-a9028b300/)
