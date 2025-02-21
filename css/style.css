@@ -373,7 +373,7 @@ header .navbar ul li a:hover{
 .card-container {
     perspective: 1000px;
     width: 48rem;
-    height: 400px;
+    height: 450px;
 }
 
 /* Inner card wrapper */
