@@ -8,7 +8,7 @@ A personal portfolio website showcasing my previous projects, skills, and experi
 - **JavaScript** – Enhancing interactivity
 
 ## 📌 Live Demo
-You can view my portfolio live at: 
+You can view my portfolio live [here](https://hadhihazu.github.io/portfolio-hadhirah/)
 
 ## 📞 Contact
 If you’d like to connect, feel free to reach out:
