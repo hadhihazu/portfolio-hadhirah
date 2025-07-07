@@ -375,50 +375,122 @@ header .navbar ul li a:hover{
 }
 
 .work-container {
-    display: flex;
     justify-content: center;
-    align-items: center;
     margin: 3rem 6rem;
     border-radius: 10px;
     text-align: center;
-    flex-wrap: wrap; /* Allows elements to stack on smaller screens */
-    gap: 1.5rem;
+}
+
+.work-year-box {
+    display: flex;
+    width: 100%;
 }
 
 .work-year {
-    font-size: 6rem; /* Adjusted for better scaling */
+    font-size: 2rem;
     font-weight: bold;
-    padding: .5rem 2rem;
-    width: auto;
+    padding: 0 0 2rem 0;
     background: var(--gradient);
     background-clip: text;
+    text-align: left;
+    display: flex;
+    justify-content:space-between;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.work-box {
+.work-year h2 span {
+    font-size: 2rem;
+}
+
+.work-content {
     padding: 2rem;
     border-radius: 10px;
     width: 100%;
-    max-width: 600px; /* Prevents full-width stretch on larger screens */
     color: white;
     background: rgba(11, 40, 63, 0.25);
     box-shadow: var(--shadow);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    display:flex;
+    margin-bottom: 2rem;
 }
 
-/* Text size adjustments */
 .work-box h2 {
     font-size: 20px;
+    margin-bottom: 0.5rem;
 }
 
-.work-box h3 {
+.work-right h2 {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: var(--pinkeu);
+}
+
+.work-box h3,
+.work-right h3 {
     font-size: 16px;
+    color: var(--pinkeu);
 }
 
-.work-box p {
+.work-box p,
+.work-right p {
     font-size: 14px;
+}
+
+.work-content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-left {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.work-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.work-right {
+    flex: 1 1 400px;
+    color: white;
+}
+
+.work-desc-box {
+    padding: 2rem;
+    border-top: 1px #fff4 solid;
+    border-bottom: 1px #fff4 solid;
+    font-size: 14px;
+    color: white;
+}
+
+.work-tech h3 {
+    font-size: 16px;
+    padding: 1rem;
+}
+
+.work-tech ul {
+    color: #fff;
+    font-size: 14px;
+    list-style: none;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.work-tech ul li {
+    font-size: 1.3rem;
+    background: var(--gradient);
+    color: var(--darkblue);
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
 }
 
 .cards-wrapper {
